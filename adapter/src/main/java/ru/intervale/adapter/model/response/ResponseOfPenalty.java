@@ -3,7 +3,7 @@ package ru.intervale.adapter.model.response;
 import lombok.Data;
 
 import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Data
 public class ResponseOfPenalty {
@@ -12,7 +12,7 @@ public class ResponseOfPenalty {
     private BigDecimal amountToBePaid;
     private String resolutionNumber;
     private String vehicleCertificate;
-    private Date dateOfTheResolution;
+    private LocalDate dateOfTheResolution;
     private String articleOfTheAdministrativeCode;
 
 }

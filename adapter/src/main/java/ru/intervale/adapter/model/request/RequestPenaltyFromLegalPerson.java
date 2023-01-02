@@ -1,12 +1,11 @@
-package ru.intervale.adapter.model.request.impl;
+package ru.intervale.adapter.model.request;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
-import ru.intervale.adapter.model.request.RequestPenalty;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class RequestPenaltyFromLegalPersonPenalty implements RequestPenalty {
+public class RequestPenaltyFromLegalPerson {
 
     private String taxpayerIdentificationNumber;
 }
