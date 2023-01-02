@@ -1,7 +1,9 @@
 package ru.intervale.adapter.service.impl;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import ru.intervale.adapter.client.SmevClient;
 import ru.intervale.adapter.exception.SmevClientException;
@@ -26,6 +28,7 @@ public class PenaltyServiceImpl implements PenaltyService {
             boolean penaltyIsReceived = false;
 
             //TODO: make normal checker, maybe circuit breaker
+            Thread.sleep(1000);
             while (!penaltyIsReceived) {
                 final ResponseEntity<ResponseOfPenalty> responseWithPenalty = smevClient.gettingResultForNaturelPerson(responseWithId.getBody());
 
@@ -48,6 +51,7 @@ public class PenaltyServiceImpl implements PenaltyService {
             boolean penaltyIsReceived = false;
 
             //TODO: make normal checker, maybe circuit breaker
+            Thread.sleep(1000);
             while (!penaltyIsReceived) {
                 final ResponseEntity<ResponseOfPenalty> responseWithPenalty = smevClient.gettingResultForLegalPerson(responseWithId.getBody());
 
@@ -58,6 +62,29 @@ public class PenaltyServiceImpl implements PenaltyService {
         } else {
             throw new SmevClientException("Something wrong in SMEV, try later!");
         }
+    }
+
+    @Override
+    @Async
+    public void sendAcknowledgeForNaturalPerson(RequestPenaltyFromNaturalPerson request) {
+        final ResponseEntity<HttpStatus> response =
+                smevClient.sendAcknowledgeForNaturalPerson(request.getVehicleCertificate());
+
+        if (response.getStatusCode().is5xxServerError()) {
+            throw new SmevClientException("SMEV can't delete message!");
+        }
+    }
+
+    @Override
+    @Async
+    public void sendAcknowledgeForLegalPerson(RequestPenaltyFromLegalPerson request) {
+        final ResponseEntity<HttpStatus> response =
+                smevClient.sendAcknowledgeForLegalPerson(request.getTaxpayerIdentificationNumber());
+
+        if (response.getStatusCode().is5xxServerError()) {
+            throw new SmevClientException("SMEV can't delete message!");
+        }
+
     }
 
     private boolean isPenaltyReceived(ResponseOfPenalty penalty,
