@@ -1,6 +1,7 @@
 package ru.intervale.adapter.client.impl;
 
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -10,14 +11,19 @@ import ru.intervale.adapter.model.request.RequestPenaltyFromNaturalPerson;
 import ru.intervale.adapter.model.response.ResponseOfPenalty;
 
 @Service
-@RequiredArgsConstructor
 public class SmevClientImpl implements SmevClient {
 
     private static final String SMEV_INFO_URL_NATURAL = "http://localhost:8081/api/v1/info/natural/";
     private static final String SMEV_RESULT_URL_NATURAL = "http://localhost:8081/api/v1/result/natural/";
     private static final String SMEV_INFO_URL_LEGAL = "http://localhost:8081/api/v1/info/legal/";
     private static final String SMEV_RESULT_URL_LEGAL = "http://localhost:8081/api/v1/result/legal/";
+
     private final RestTemplate restTemplate;
+
+    @Autowired
+    public SmevClientImpl(RestTemplateBuilder builder) {
+        this.restTemplate = builder.build();
+    }
 
     @Override
     public ResponseEntity<String> gettingInformationForNaturalPerson(RequestPenaltyFromNaturalPerson request) {
