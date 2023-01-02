@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64e73967-49a9-4286-8d3a-88ce41536806" name="Changes" comment="feature Interaction with Smev">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adapter/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/adapter/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adapter/src/main/java/ru/intervale/adapter/client/impl/SmevClientImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/adapter/src/main/java/ru/intervale/adapter/client/impl/SmevClientImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adapter/src/main/java/ru/intervale/adapter/config/RestTemplateConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/adapter/src/main/java/ru/intervale/adapter/model/response/ResponseOfPenalty.java" beforeDir="false" afterPath="$PROJECT_DIR$/adapter/src/main/java/ru/intervale/adapter/model/response/ResponseOfPenalty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adapter/src/main/java/ru/intervale/adapter/service/PenaltyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/adapter/src/main/java/ru/intervale/adapter/service/impl/PenaltyServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="64e73967-49a9-4286-8d3a-88ce41536806" name="Changes" comment="feature Interaction with Smev (testing)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -179,7 +172,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672652987579</updated>
-      <workItem from="1672652988839" duration="18296000" />
+      <workItem from="1672652988839" duration="18630000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1672654813490</created>
@@ -202,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672664510616</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feature Interaction with Smev (testing)">
+      <created>1672671622627</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672671622627</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,6 +223,7 @@
     <MESSAGE value="init commit" />
     <MESSAGE value="add pattern for Adapter" />
     <MESSAGE value="feature Interaction with Smev" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature Interaction with Smev" />
+    <MESSAGE value="feature Interaction with Smev (testing)" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature Interaction with Smev (testing)" />
   </component>
 </project>
