@@ -26,6 +26,7 @@ public class PenaltyController {
 
         try {
             final ResponseOfPenalty penalty = penaltyService.getInfoFromSmevForNaturalPerson(requestPenalty);
+            penaltyService.sendAcknowledgeForNaturalPerson(requestPenalty);
             return new ResponseEntity<>(penalty, HttpStatus.OK);
         } catch (InterruptedException | SmevClientException e) {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Something wrong with SMEV, try later!", e);
@@ -37,6 +38,7 @@ public class PenaltyController {
 
         try {
             final ResponseOfPenalty penalty = penaltyService.getInfoFromSmevForLegalPerson(requestPenalty);
+            penaltyService.sendAcknowledgeForLegalPerson(requestPenalty);
             return new ResponseEntity<>(penalty, HttpStatus.OK);
         } catch (InterruptedException | SmevClientException e) {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Something wrong with SMEV, try later!", e);

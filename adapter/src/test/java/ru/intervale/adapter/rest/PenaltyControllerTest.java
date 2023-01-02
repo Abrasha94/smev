@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
@@ -27,6 +28,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @ExtendWith(SpringExtension.class)
 @WebMvcTest(PenaltyController.class)
+@EnableAsync
 public class PenaltyControllerTest {
 
     @MockBean
@@ -70,6 +72,7 @@ public class PenaltyControllerTest {
         mockMvc.perform(request)
                 .andExpect(status().isInternalServerError());
     }
+
     @NotNull
     private static ResponseOfPenalty getResponseOfPenalty() {
         final ResponseOfPenalty penalty = new ResponseOfPenalty();

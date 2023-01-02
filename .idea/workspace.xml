@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64e73967-49a9-4286-8d3a-88ce41536806" name="Changes" comment="feature Interaction with Smev (testing)" />
+    <list default="true" id="64e73967-49a9-4286-8d3a-88ce41536806" name="Changes" comment="init commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adapter/src/main/java/ru/intervale/adapter/client/SmevClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/adapter/src/main/java/ru/intervale/adapter/client/SmevClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adapter/src/main/java/ru/intervale/adapter/client/impl/SmevClientImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/adapter/src/main/java/ru/intervale/adapter/client/impl/SmevClientImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adapter/src/main/java/ru/intervale/adapter/rest/PenaltyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/adapter/src/main/java/ru/intervale/adapter/rest/PenaltyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adapter/src/main/java/ru/intervale/adapter/service/PenaltyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/adapter/src/main/java/ru/intervale/adapter/service/PenaltyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adapter/src/main/java/ru/intervale/adapter/service/impl/PenaltyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/adapter/src/main/java/ru/intervale/adapter/service/impl/PenaltyServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adapter/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/adapter/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adapter/src/test/java/ru/intervale/adapter/rest/PenaltyControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/adapter/src/test/java/ru/intervale/adapter/rest/PenaltyControllerTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +25,14 @@
         <option value="Interface" />
         <option value="Class" />
       </list>
+    </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="feature_interaction_with_smev" />
+    <option name="OPTIONS">
+      <set>
+        <option value="NO_FF" />
+      </set>
     </option>
   </component>
   <component name="Git.Settings">
@@ -45,23 +62,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "extract.method.default.visibility": "private",
-    "jdk.selected.JAVA_MODULE": "corretto-11",
-    "last_opened_file_path": "D:/smev/adapter/pom.xml",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-11&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/smev/adapter/pom.xml&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ru.intervale.adapter.client.impl" />
@@ -108,7 +125,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PenaltyServiceTest.whenGettingInfoForPerson_thenReturnDto" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PenaltyServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="adapter" />
       <extension name="coverage">
         <pattern>
@@ -118,8 +135,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.intervale.adapter.service" />
       <option name="MAIN_CLASS_NAME" value="ru.intervale.adapter.service.PenaltyServiceTest" />
-      <option name="METHOD_NAME" value="whenGettingInfoForPerson_thenReturnDto" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -157,10 +173,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in adapter" />
-        <item itemvalue="JUnit.PenaltyControllerTest.whenException_thenStatusError" />
         <item itemvalue="JUnit.PenaltyControllerTest.whenRequestPenalty_thenReturnPenalty" />
+        <item itemvalue="JUnit.PenaltyServiceTest" />
+        <item itemvalue="JUnit.PenaltyControllerTest.whenException_thenStatusError" />
         <item itemvalue="JUnit.PenaltyServiceTest.whenNoAnswerFromSvem_thenThrowException" />
-        <item itemvalue="JUnit.PenaltyServiceTest.whenGettingInfoForPerson_thenReturnDto" />
       </list>
     </recent_temporary>
   </component>

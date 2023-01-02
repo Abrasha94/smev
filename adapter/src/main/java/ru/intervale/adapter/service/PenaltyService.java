@@ -9,4 +9,7 @@ public interface PenaltyService {
     ResponseOfPenalty getInfoFromSmevForNaturalPerson(RequestPenaltyFromNaturalPerson request) throws InterruptedException;
 
     ResponseOfPenalty getInfoFromSmevForLegalPerson(RequestPenaltyFromLegalPerson request) throws InterruptedException;
+
+    void sendAcknowledgeForNaturalPerson(RequestPenaltyFromNaturalPerson request);
+    void sendAcknowledgeForLegalPerson(RequestPenaltyFromLegalPerson request);
 }
