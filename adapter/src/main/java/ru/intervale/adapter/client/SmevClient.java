@@ -10,11 +10,11 @@ public interface SmevClient {
 
     ResponseEntity<String> gettingInformationForNaturalPerson(RequestPenaltyFromNaturalPerson request);
 
-    ResponseEntity<ResponseOfPenalty> gettingResultForNaturelPerson(String id);
+    ResponseEntity<ResponseOfPenalty> gettingResultForNaturelPerson(Long id);
 
     ResponseEntity<String> gettingInformationForLegalPerson(RequestPenaltyFromLegalPerson request);
 
-    ResponseEntity<ResponseOfPenalty> gettingResultForLegalPerson(String id);
+    ResponseEntity<ResponseOfPenalty> gettingResultForLegalPerson(Long id);
 
     ResponseEntity<HttpStatus> sendAcknowledgeForNaturalPerson(String vehicleCertificate);
     ResponseEntity<HttpStatus> sendAcknowledgeForLegalPerson(String taxpayerIdentificationNumber);

@@ -37,8 +37,8 @@ public class PenaltyServiceTest {
         final ResponseOfPenalty penalty = getResponseOfPenalty();
 
         when(smevClient.gettingInformationForNaturalPerson(any(RequestPenaltyFromNaturalPerson.class)))
-                .thenReturn(new ResponseEntity<>("test", HttpStatus.OK));
-        when(smevClient.gettingResultForNaturelPerson("test"))
+                .thenReturn(new ResponseEntity<>("123", HttpStatus.OK));
+        when(smevClient.gettingResultForNaturelPerson(123L))
                 .thenReturn(new ResponseEntity<>(penalty, HttpStatus.OK));
 
         final ResponseOfPenalty response = penaltyService.getInfoFromSmevForNaturalPerson(new RequestPenaltyFromNaturalPerson());

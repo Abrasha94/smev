@@ -26,12 +26,12 @@ public class SmevClientTest {
     void whenGettingInfo_thenReturnId() {
         this.mockRestServiceServer
                 .expect(MockRestRequestMatchers.requestTo("http://localhost:8081/api/v1/info/natural/"))
-                .andRespond(MockRestResponseCreators.withSuccess("test", MediaType.TEXT_PLAIN));
+                .andRespond(MockRestResponseCreators.withSuccess("123", MediaType.TEXT_PLAIN));
 
         final ResponseEntity<String> response = smevClient.gettingInformationForNaturalPerson(new RequestPenaltyFromNaturalPerson());
 
         assertThat(response.getBody()).isNotNull();
-        assertThat(response.getBody()).isEqualTo("test");
+        assertThat(response.getBody()).isEqualTo("123");
     }
 
     @Test
@@ -49,7 +49,7 @@ public class SmevClientTest {
                 .expect(MockRestRequestMatchers.requestTo("http://localhost:8081/api/v1/result/legal/"))
                 .andRespond(MockRestResponseCreators.withSuccess(json, MediaType.APPLICATION_JSON));
 
-        final ResponseEntity<ResponseOfPenalty> response = smevClient.gettingResultForLegalPerson("1");
+        final ResponseEntity<ResponseOfPenalty> response = smevClient.gettingResultForLegalPerson(1L);
 
         assertThat(response.getBody()).isNotNull();
         assertThat(response.getBody().getResolutionNumber()).isEqualTo("test");

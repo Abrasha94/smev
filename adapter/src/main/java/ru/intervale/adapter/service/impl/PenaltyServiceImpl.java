@@ -24,13 +24,14 @@ public class PenaltyServiceImpl implements PenaltyService {
 
         final ResponseEntity<String> responseWithId = smevClient.gettingInformationForNaturalPerson(request);
 
-        if (responseWithId.getStatusCode().is2xxSuccessful()) {
+        if (responseWithId.getStatusCode().is2xxSuccessful() && responseWithId.getBody() != null) {
             boolean penaltyIsReceived = false;
 
             //TODO: make normal checker, maybe circuit breaker
             Thread.sleep(1000);
             while (!penaltyIsReceived) {
-                final ResponseEntity<ResponseOfPenalty> responseWithPenalty = smevClient.gettingResultForNaturelPerson(responseWithId.getBody());
+                final ResponseEntity<ResponseOfPenalty> responseWithPenalty =
+                        smevClient.gettingResultForNaturelPerson(Long.valueOf(responseWithId.getBody()));
 
                 penaltyIsReceived = isPenaltyReceived(penalty, penaltyIsReceived, responseWithPenalty);
             }
@@ -47,13 +48,14 @@ public class PenaltyServiceImpl implements PenaltyService {
 
         final ResponseEntity<String> responseWithId = smevClient.gettingInformationForLegalPerson(request);
 
-        if (responseWithId.getStatusCode().is2xxSuccessful()) {
+        if (responseWithId.getStatusCode().is2xxSuccessful() && responseWithId.getBody() != null) {
             boolean penaltyIsReceived = false;
 
             //TODO: make normal checker, maybe circuit breaker
             Thread.sleep(1000);
             while (!penaltyIsReceived) {
-                final ResponseEntity<ResponseOfPenalty> responseWithPenalty = smevClient.gettingResultForLegalPerson(responseWithId.getBody());
+                final ResponseEntity<ResponseOfPenalty> responseWithPenalty =
+                        smevClient.gettingResultForLegalPerson(Long.valueOf(responseWithId.getBody()));
 
                 penaltyIsReceived = isPenaltyReceived(penalty, penaltyIsReceived, responseWithPenalty);
             }
