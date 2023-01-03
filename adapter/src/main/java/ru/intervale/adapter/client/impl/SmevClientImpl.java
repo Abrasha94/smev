@@ -35,7 +35,7 @@ public class SmevClientImpl implements SmevClient {
     }
 
     @Override
-    public ResponseEntity<ResponseOfPenalty> gettingResultForNaturelPerson(String id) {
+    public ResponseEntity<ResponseOfPenalty> gettingResultForNaturelPerson(Long id) {
         return restTemplate.getForEntity(SMEV_RESULT_URL_NATURAL + id, ResponseOfPenalty.class);
     }
 
@@ -45,8 +45,8 @@ public class SmevClientImpl implements SmevClient {
     }
 
     @Override
-    public ResponseEntity<ResponseOfPenalty> gettingResultForLegalPerson(String id) {
-        return restTemplate.getForEntity(SMEV_RESULT_URL_LEGAL, ResponseOfPenalty.class);
+    public ResponseEntity<ResponseOfPenalty> gettingResultForLegalPerson(Long id) {
+        return restTemplate.getForEntity(SMEV_RESULT_URL_LEGAL + id, ResponseOfPenalty.class);
     }
 
     @Override
